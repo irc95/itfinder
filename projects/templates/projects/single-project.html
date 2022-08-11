@@ -3,6 +3,7 @@
 <head>
     
     <title>Шаблон для отдельного проекта</title>
+    <meta charset="UTF-8">
     
 </head>
 <body>
@@ -10,6 +11,11 @@
     <h3>Проект #{{ project.id }}</h3>
     <p>{{ project.title }}</p>
     <br>
+    <ul>
+        {% for tag in project.tags.all %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
     <em>{{ project.description }}</em>
 </body>
 </html>
